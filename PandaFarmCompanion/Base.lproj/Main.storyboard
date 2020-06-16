@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,34 +23,53 @@
                                     <action selector="wifiAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RrK-BW-CV5"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2F1-tN-iiN">
-                                <rect key="frame" x="10" y="94" width="394" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMb-hq-3Y8">
+                                <rect key="frame" x="10" y="94" width="394" height="30"/>
+                                <state key="normal" title="General"/>
+                                <connections>
+                                    <action selector="generalSettingsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bl2-Wb-v99"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Path" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2F1-tN-iiN">
+                                <rect key="frame" x="10" y="134" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUA-Gi-Jgi">
-                                <rect key="frame" x="10" y="138" width="394" height="30"/>
+                                <rect key="frame" x="10" y="178" width="394" height="30"/>
                                 <state key="normal" title="Test"/>
                                 <connections>
                                     <action selector="testAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LVg-rN-wCF"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ec-Fi-05X">
+                                <rect key="frame" x="10" y="218" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="OMb-hq-3Y8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BZP-Lg-NWl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cUA-Gi-Jgi" secondAttribute="trailing" constant="10" id="K9V-Pd-CTi"/>
-                            <constraint firstItem="2F1-tN-iiN" firstAttribute="top" secondItem="Edy-g5-jlX" secondAttribute="bottom" constant="10" id="Kne-Pb-RWI"/>
+                            <constraint firstItem="2F1-tN-iiN" firstAttribute="top" secondItem="OMb-hq-3Y8" secondAttribute="bottom" constant="10" id="Kne-Pb-RWI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Edy-g5-jlX" secondAttribute="trailing" constant="10" id="Oce-BD-0wH"/>
+                            <constraint firstItem="0ec-Fi-05X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="PYj-iH-HYf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OMb-hq-3Y8" secondAttribute="trailing" constant="10" id="Ylz-0o-Crz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0ec-Fi-05X" secondAttribute="trailing" constant="10" id="ZVh-xR-0Ak"/>
                             <constraint firstItem="Edy-g5-jlX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="b39-Iu-5yZ"/>
+                            <constraint firstItem="OMb-hq-3Y8" firstAttribute="top" secondItem="Edy-g5-jlX" secondAttribute="bottom" constant="10" id="dUR-gG-U13"/>
                             <constraint firstItem="cUA-Gi-Jgi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="e8f-io-XF3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2F1-tN-iiN" secondAttribute="trailing" constant="10" id="iyQ-hb-yiT"/>
                             <constraint firstItem="cUA-Gi-Jgi" firstAttribute="top" secondItem="2F1-tN-iiN" secondAttribute="bottom" constant="10" id="n6A-4W-tcz"/>
                             <constraint firstItem="Edy-g5-jlX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="o9E-LB-9m2"/>
                             <constraint firstItem="2F1-tN-iiN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="uvq-sI-C3L"/>
+                            <constraint firstItem="0ec-Fi-05X" firstAttribute="top" secondItem="cUA-Gi-Jgi" secondAttribute="bottom" constant="10" id="xtX-JX-SWg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="browserTextField" destination="0ec-Fi-05X" id="oM4-Sr-rsc"/>
                         <outlet property="settingsTextField" destination="2F1-tN-iiN" id="fdb-Nv-Vey"/>
                         <outlet property="wifiButton" destination="Edy-g5-jlX" id="faM-Uc-Y4F"/>
                     </connections>
